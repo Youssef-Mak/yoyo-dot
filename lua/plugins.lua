@@ -34,9 +34,6 @@ return {
     { 'hrsh7th/nvim-cmp' },
     { 'L3MON4D3/LuaSnip' },
     { 'navarasu/onedark.nvim' },
-
-
-
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' }
@@ -48,14 +45,22 @@ return {
         -- use opts = {} for passing setup options
         -- this is equalent to setup({}) function
     },
-
     { 'airblade/vim-gitgutter' },
-
     {
         'numToStr/Comment.nvim',
         opts = {
             -- add any options here
         },
         lazy = false,
-    }
+    },
+    { 'github/copilot.vim' },
+    {
+        "nvim-neotest/neotest",
+        dependencies = {
+            "nvim-neotest/nvim-nio",
+            "nvim-lua/plenary.nvim",
+            "antoinemadec/FixCursorHold.nvim",
+            "nvim-treesitter/nvim-treesitter"
+        }
+    },
 }

@@ -63,4 +63,5 @@ return {
             "nvim-treesitter/nvim-treesitter"
         }
     },
+    { 'ruanyl/vim-gh-line' },
 }

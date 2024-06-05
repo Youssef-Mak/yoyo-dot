@@ -34,10 +34,7 @@ return {
     { 'hrsh7th/nvim-cmp' },
     { 'L3MON4D3/LuaSnip' },
     { 'navarasu/onedark.nvim' },
-    {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },
+    { 'vim-airline/vim-airline' },
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
@@ -64,4 +61,13 @@ return {
         }
     },
     { 'ruanyl/vim-gh-line' },
+    {
+        "nvim-neotest/neotest",
+        dependencies = {
+            "nvim-neotest/nvim-nio",
+            "nvim-lua/plenary.nvim",
+            "antoinemadec/FixCursorHold.nvim",
+            "nvim-treesitter/nvim-treesitter"
+        }
+    },
 }

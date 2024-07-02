@@ -23,6 +23,11 @@ return {
             })
         end
     },
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+    },
+
+    --- Uncomment the two plugins below if you want to manage the language servers from neovim
 
     --- Uncomment the two plugins below if you want to manage the language servers from neovim
     { 'williamboman/mason.nvim' },
@@ -34,7 +39,6 @@ return {
     { 'hrsh7th/nvim-cmp' },
     { 'L3MON4D3/LuaSnip' },
     { 'navarasu/onedark.nvim' },
-    { 'vim-airline/vim-airline' },
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
@@ -99,5 +103,50 @@ return {
             })
         end,
 
+    },
+    {
+        'ray-x/navigator.lua',
+        dependencies = {
+            { 'ray-x/guihua.lua',     run = 'cd lua/fzy && make' },
+            { 'neovim/nvim-lspconfig' },
+        },
+    },
+    {
+        "j-hui/fidget.nvim",
+        opts = {
+        },
+    },
+    -- ChatGPT needs me to update the token and host every darn day that's wack
+    -- {
+    --     "jackMort/ChatGPT.nvim",
+    --     event = "VeryLazy",
+    --     config = function()
+    --         require("chatgpt").setup()
+    --     end,
+    --     dependencies = {
+    --         "MunifTanjim/nui.nvim",
+    --         "nvim-lua/plenary.nvim",
+    --         "nvim-telescope/telescope.nvim"
+    --     }
+    -- },
+    "nvim-tree/nvim-web-devicons",
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
+    {
+        'romgrk/barbar.nvim',
+        dependencies = {
+            'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
+            'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+        },
+        init = function() vim.g.barbar_auto_setup = false end,
+        opts = {
+            -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+            -- animation = true,
+            -- insert_at_start = true,
+            -- …etc.
+        },
+        version = '^1.0.0', -- optional: only update when a new 1.x version is released
     },
 }

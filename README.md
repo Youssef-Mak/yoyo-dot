@@ -1,1 +1,7 @@
-brew install font-hack-nerd-font
+clone da repo in ~/.config 
+
+then run setup.sh
+
+
+
+

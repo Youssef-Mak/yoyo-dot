@@ -2,6 +2,7 @@ brew update
 brew upgrade
 
 
+brew install node
 brew install tmux
 brew install fd
 brew install font-hack-nerd-font

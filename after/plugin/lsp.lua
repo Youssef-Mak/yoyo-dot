@@ -8,7 +8,7 @@ local lsp_format_on_save = function(bufnr)
         group = augroup,
         buffer = bufnr,
         callback = function()
-            vim.lsp.buf.format()
+            if vim.bo.filetype ~= 'proto' then vim.lsp.buf.format() end
         end,
     })
 end
